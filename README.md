@@ -13,8 +13,6 @@
 
 ## 📣 Latest Updates
 
-- **[03/09/2025]** 📊 *The [website](http://translational-ai.online/) of CAMPaS has been made publicly available!*
-- **[01/09/2025]** 📊 *CAMPaS code has been released!*
 - **[01/05/2025]** 🎉 *Our benchmarking-validated model, M3C2, an upgraded version of DeepMO-Glioma, has been accepted to Medical Image Analysis! 📄[[paper]](https://www.sciencedirect.com/science/article/pii/S1361841525000532) 💻[[code]](https://github.com/LHY1007/M3C2/)*
 - **[12/10/2023]** 🎉 *Our conceptual model is nominated for <span style="color:red; font-weight:bold;">Best Paper Award</span> in MICCAI 2023.*
 - **[01/10/2023]** 🎉 *Our conceptual cross-modal learning model, DeepMO-Glioma, is now online in MICCAI 2023 (<span style="color:red; font-weight:bold;">oral</span>). 📄[[paper]](https://link.springer.com/chapter/10.1007/978-3-031-43990-2_52) 💻[[code]](https://github.com/XiaofeiWang2018/DeepMO-Glioma-Code)*
@@ -95,5 +93,6 @@ Please open an issue or submit a pull request for issues, or contributions.
 <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" />
 </a>
+
 
 
