@@ -8,10 +8,7 @@
 
 
 
-<div align="center">
-  <a href="https://www.medrxiv.org/content/medrxiv/early/2025/07/07/2025.07.07.25330997.full.pdf" target="_blank" rel="external nofollow noopener">
-  <img src="https://img.shields.io/badge/Paper-medRxiv-deepgreen" alt="Paper medRxiv"></a>
-</div>
+
 
 
 ## 📣 Latest Updates
@@ -98,4 +95,5 @@ Please open an issue or submit a pull request for issues, or contributions.
 <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" />
 </a>
+
 
