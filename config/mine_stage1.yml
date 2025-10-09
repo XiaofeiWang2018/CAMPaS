@@ -1,0 +1,50 @@
+name: Mine_stage1
+batchSize: 8
+command: Train
+gpus: [0,1]
+TrainingSet: 'TCGA'
+fold: 0 # 0,1,2
+dataDir: processed_data/TCGA/
+
+
+Network:
+  lr: 0.003
+  dropout_rate: 0.1
+  His_layers: 3
+  Trans_block: 'full' #'full' 'simple'
+  w_loss_OA: 0.5
+  w_loss_noise: 0.1
+  atten_theta: 0.5
+  entropy_thre: 1
+
+
+
+
+#### Training setting
+n_ep_pre: 10
+n_ep: 70
+decay_cos_warmup_steps: 35
+saliency_ep: [10,30]
+
+
+
+#### Directories
+logDir: ./logs
+saveDir: ./outs
+modelDir: ./models
+cm_saveDir: ./cm
+label_path: ./dataset_info/
+
+#### Meta setting main
+dataset: TCGA
+nThreads: 8
+seed: 824
+imgSize: [224,224]
+eva_cm: False
+n_ep_save: 5
+fp16: False
+Val_batchSize: 1
+Test_batchSize: 1
+n_ep_decay: 15
+fixdim: 2500
+decayType: cos # step, linear, exp cos

@@ -1,0 +1,41 @@
+TrainingSet: 'TCGA'
+fold: 0 # 0,1,2
+test_pth: '' # path to your trained model file
+dataDir: processed_data/TCGA/
+
+
+Network:
+  dropout_rate: 0.1
+  His_layers: 3
+  Mole_layers_share: 1
+  Mole_layers_unique: 2
+  Trans_block: 'full' #'full' 'simple'
+  atten_theta: 0.5
+  entropy_thre: 1
+  graph_alpha: 0.1
+  Body_layers: 1
+  lr: 0
+
+
+
+gpus: [0]
+#### Directories
+logDir: ./logs
+saveDir: ./outs
+modelDir: ./models
+cm_saveDir: ./cm
+label_path: ./dataset_info/
+dataset: TCGA
+nThreads: 8
+seed: 824
+imgSize: [224,224]
+eva_cm: False
+n_ep_save: 5
+fp16: False
+command: Train # Test
+Val_batchSize: 1
+Test_batchSize: 1
+n_ep_decay: 15
+fixdim: 2500
+name: 'None'
+

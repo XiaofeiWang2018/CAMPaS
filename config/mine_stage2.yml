@@ -1,0 +1,52 @@
+name: Mine_stage2
+gpus: [0,1]
+batchSize: 8
+TrainingSet: 'TCGA'
+fold: 0 # 0,1,2
+hispretrain: 'his_model' # Here is the default value for pretrained_model_for_histology_prediction, you can specify this according to your settings
+dataDir: processed_data/TCGA/
+
+Network:
+  lr: 0.003
+  dropout_rate: 0.1
+  His_layers: 3
+  Mole_layers_share: 1
+  Mole_layers_unique: 2
+  Trans_block: 'full' #'full' 'simple'
+  atten_theta: 0.5
+  entropy_thre: 1
+  graph_alpha: 0.1
+  graph_loss_ratio: 0.1
+  corre_loss_ratio: 0.1
+
+
+
+
+#### Training setting
+n_ep: 70
+decay_cos_warmup_steps: 35
+decayType: exp
+
+
+
+#### Directories
+logDir: ./logs
+saveDir: ./outs
+modelDir: ./models
+cm_saveDir: ./cm
+label_path: ./dataset_info/
+
+#### Meta setting main
+dataset: TCGA
+nThreads: 8
+seed: 824
+imgSize: [224,224]
+eva_cm: False
+n_ep_save: 5
+fp16: False
+command: Train # Test
+Val_batchSize: 1
+Test_batchSize: 1
+n_ep_decay: 15
+fixdim: 2500
+
