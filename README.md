@@ -21,23 +21,15 @@
 
 - **CAMPaS** (Cross-modal AI for integrated Molecular Pathology Diagnosis and Stratification) is a trustworthy AI framework tailored for real-world cancer diagnosis 
 
-- CAMPaS is trained, fine-tuned and tested in eight independent cohorts (**3,367** patients; **6,043** WSIs), incouding six retrospective and two **prospective** cohorts.
-![sicl](doc/dataset.png) 
 
-- Based on our previous benchmarking-validated models (**[M3C2](https://www.sciencedirect.com/science/article/pii/S1361841525000532)** and **[DeepMO-Glioma](https://link.springer.com/chapter/10.1007/978-3-031-43990-2_52)**), a **bi-directional attention module** and 
-**noise-robust learning module** are further proposed in CAMPaS for mitigating challenges of **dataset heterogeneity** and **label uncertainty** in real-world datasets.
-![sicl](doc/CAMPaS.png) 
 
-- Overall, our CAMPaS‐based pipeline represents the **clinical prototyping** stage, encompassing prospective utility validation, bridging 
- model development with future regulatory‐aligned clinical deployment along the translation pathway.
-![sicl](doc/evaluation.png) 
 
 
 
 
 ## About this code
 
-The M3C2 codebase is written in Python and focuses on integrating histology features and molecular markers for cancer classification.
+The CAMPaS codebase is written in Python and focuses on integrating histology features and molecular markers for cancer classification.
 It uses various deep learning techniques for analyzing whole-slide images (WSIs) and predicting cancer types, particularly gliomas. 
 
 ## How to apply the work
@@ -49,32 +41,31 @@ conda env create -n <name> -f environment.yml
 ```
 ### 2. Prepare data
 
-- Put your own histology (H&E) images into folder `./my_data/`. The use the following 
+- Put your own/public histology (H&E) images into folder `./my_data/your_dataset_name/`. For example, you can set it to `./my_data/TCGA/` when processing TCGA dataset.  Use the following 
 command.
 ```
-    python ./data_process.py 
+    python ./data_process.py --dataset_name "your_dataset_name"
 ```
 - Construct the label (`.xlsx`) file of your own dataset as that of TCGA in `./dataset_info/`.
 
-- Prepare for the list of samples with noisy labels by the following command.
-
-```
-    python ./label_noise_preprocessing.py 
-```
+- For example, you can construct the TCGA dataset by downloading the [WSI files](https://portal.gdc.cancer.gov/) to `./my_data/TCGA/` using the 
+file name list in `dataset_info/TCGA.xlsx`. Finally, you will find the processed TCGA data in `./processed_data/TCGA/`.
 
 ### 3. Train
-- Use the below commands to train the model on TCGA cohort in a three-fold  cross validation setting. If you want 
-to train with your own dataset, please modify corresponding files properly.
+- If you want  to train with your own dataset and settings, please modify corresponding variables in `config/mine_stage1.yml` and `config/mine_stage2.yml`.  Otherwise,
+you can use the default hyperparameters, and you should adjust the variable `fold` to 0 or 1 or 2 in the config files for the three-fold cross validation settings.
+
+- Specifically, you can use the below commands to train the model for stage 1 on TCGA cohort:
 ```
     python ./train_stage1.py 
 ```
- and then
+- and then train the model for stage 2 on TCGA cohort:
 ```
     python ./train_stage2.py 
 ```
 
 ### 4. Test
-Use the below command to test the model.
+We provide a test example using the TCGA cohort, in which the test set was identical to the validation set from the three-fold cross-validation (fold 0). Use the below command to test the model.
 ```
     python ./test.py
 ```
@@ -93,6 +84,7 @@ Please open an issue or submit a pull request for issues, or contributions.
 <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" />
 </a>
+
 
 
 
