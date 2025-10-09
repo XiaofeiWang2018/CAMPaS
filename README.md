@@ -65,7 +65,8 @@ you can use the default hyperparameters, and you should adjust the variable `fol
 ```
 
 ### 4. Test
-We provide a test example using the TCGA cohort, in which the test set was identical to the validation set from the three-fold cross-validation (fold 0). Use the below command to test the model.
+We provide a test example using the TCGA cohort, in which the test set was identical to the validation set from the three-fold cross-validation (fold 0). 
+You can download the provided [pretrained model example](https://drive.google.com/file/d/1HbyxPOtyAZLeisVJsiqN7oEgKa4yqP8v/view?usp=sharing) and put it under `./models/`. Use the below command to test the model.
 ```
     python ./test.py
 ```
