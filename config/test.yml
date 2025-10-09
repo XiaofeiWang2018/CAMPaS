@@ -1,6 +1,6 @@
 TrainingSet: 'TCGA'
 fold: 0 # 0,1,2
-test_pth: '' # path to your trained model file
+test_pth: 'models/model_name.pth' # path to your trained model file (replace the 'model_name' to your set name)
 dataDir: processed_data/TCGA/
 
 
@@ -38,4 +38,5 @@ Test_batchSize: 1
 n_ep_decay: 15
 fixdim: 2500
 name: 'None'
+
 
