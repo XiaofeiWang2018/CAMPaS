@@ -64,7 +64,7 @@ you can use the default hyperparameters, and you should adjust the variable `fol
 ```
 
 ### 4. Test
-To test the model trained in TCGA cohort, you can download the provided [pretrained model example](https://www.dropbox.com/scl/fi/nyvz1qny07ybcu1ns2s6z/TCGA_fold0.pth?rlkey=1cwwqozfn1e6moxjdtazxtdh1&st=tlpqr311&dl=0) and put it under `./models/`. Use the below command to test the model.
+To test the model trained in TCGA cohort, you can download the provided [pretrained model weights](https://www.dropbox.com/scl/fi/nyvz1qny07ybcu1ns2s6z/TCGA_fold0.pth?rlkey=1cwwqozfn1e6moxjdtazxtdh1&st=tlpqr311&dl=0) and put it under `./models/`. Use the below command to test the model.
 ```
     python ./test.py
 ```
