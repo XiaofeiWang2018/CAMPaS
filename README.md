@@ -17,10 +17,9 @@
 - **[12/10/2023]** 🎉 *Our conceptual model is nominated for <span style="color:red; font-weight:bold;">Best Paper Award</span> in MICCAI 2023.*
 - **[01/10/2023]** 🎉 *Our conceptual cross-modal learning model, DeepMO-Glioma, is now online in MICCAI 2023 (<span style="color:red; font-weight:bold;">oral</span>). 📄[[paper]](https://link.springer.com/chapter/10.1007/978-3-031-43990-2_52) 💻[[code]](https://github.com/XiaofeiWang2018/DeepMO-Glioma-Code)*
 
-## Highlights of CAMPaS
+## Overview
 
-- **CAMPaS** (Cross-modal AI for integrated Molecular Pathology Diagnosis and Stratification) is a trustworthy AI framework tailored for real-world cancer diagnosis 
-
+Accurate integration of histological and molecular features is central to modern cancer diagnostics, but often hampered by resource-intensive parallel workflows, limited tissues, and increased diagnostic complexity. Despite advances in computational pathology, prospective evidence of clinical utility and safety remains limited. Here, we present CAMPaS, a clinically evaluated AI tool for WHO 2021 integrated glioma diagnosis from routine hematoxylin and eosin (H&E)-stained slides. Developed and evaluated across six retrospective and two prospective cohorts (3,367 patients; 6,043 slides), CAMPaS was assessed for diagnostic performance, biological interpretability, clinical utility and safety. AI assistance improved pathologists’ diagnostic accuracy, particularly among less experienced readers, while pathologist-assisted review identified histological features indicative of molecular markers and characterized AI failure modes. CAMPaS also stratifies prognosis and treatment response. Together, these findings advance the translational evaluation of AI-assisted integrated cancer diagnosis beyond retrospective predictive performance.
 
 
 
